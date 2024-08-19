@@ -1,0 +1,14 @@
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\bin\Debug\net8.0\Software1ClassExercise1.exe
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\bin\Debug\net8.0\Software1ClassExercise1.deps.json
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\bin\Debug\net8.0\Software1ClassExercise1.runtimeconfig.json
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\bin\Debug\net8.0\Software1ClassExercise1.dll
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\bin\Debug\net8.0\Software1ClassExercise1.pdb
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.AssemblyInfoInputs.cache
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.AssemblyInfo.cs
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.dll
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\refint\Software1ClassExercise1.dll
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.pdb
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\Software1ClassExercise1.genruntimeconfig.cache
+C:\Users\Jesse\Documents\CodeYou\Software1ClassExercise1\Software1ClassExercise1\obj\Debug\net8.0\ref\Software1ClassExercise1.dll
