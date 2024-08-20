@@ -31,7 +31,7 @@ namespace PetShop
                             if (int.TryParse(userInput, out int userVal))
                             {
                                 validInt = userVal;
-                            } 
+                            }
                         } while (validInt == null || validInt < 1 || validInt > 2);
                         switch (validInt ?? 1) {
                             case 1:
@@ -47,7 +47,7 @@ namespace PetShop
                                 Console.Write("Add product weight in pounds: ");
                                 catFood.WeightPounds = int.Parse(Console.ReadLine());
                                 Console.Write("For kittens? ");
-                                catFood.KittenFood = bool.Parse(Console.ReadLine());                               
+                                catFood.KittenFood = bool.Parse(Console.ReadLine());
                                 productLogic.AddProduct(catFood);
                                 break;
                             case 2:
@@ -87,18 +87,23 @@ namespace PetShop
                         */
                         break;
                     case 2:
-                        
-                            Console.WriteLine("Enter the name of a product to retreive:");
-                            string keyName = Console.ReadLine();
-                            var dispLeash = new DogLeash();
-                            dispLeash = productLogic.GetDogLeashByName(keyName);
-                            if (dispLeash != null)
-                            {
-                                Console.WriteLine(JsonSerializer.Serialize(dispLeash));
-                            }
+                        var allDogLeash = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(DogLeash));
+                        var allCatFood = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(CatFood));
+                        Console.WriteLine("Enter the name of a product to retreive:");
+                        string keyName = Console.ReadLine();
+                        if (allDogLeash.Where(p => p.Name == keyName).Count() > 0)
+                        {
+                            var dispLeash = productLogic.GetDogLeashByName(keyName);
+                            Console.WriteLine(JsonSerializer.Serialize(dispLeash));
+                        }
+                        else if (allCatFood.Where(p => p.Name == keyName).Count() > 0)
+                        {
+                            var dispFood = productLogic.GetCatFoodByName(keyName);
+                            Console.WriteLine(JsonSerializer.Serialize(dispFood));
+                        }
                             else
                             {
-                                Console.WriteLine("That product was not found :( ");
+                            Console.WriteLine($"{keyName} was not found :( ");
                             }
                         
                         break;

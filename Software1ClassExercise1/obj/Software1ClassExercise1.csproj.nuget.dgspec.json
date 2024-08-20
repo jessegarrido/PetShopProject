@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Software1ClassExercise1.csproj": {}
+    "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Software1ClassExercise1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Software1ClassExercise1.csproj": {
+    "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Software1ClassExercise1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Software1ClassExercise1.csproj",
+        "projectUniqueName": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Software1ClassExercise1.csproj",
         "projectName": "Software1ClassExercise1",
-        "projectPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Software1ClassExercise1.csproj",
+        "projectPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Software1ClassExercise1.csproj",
         "packagesPath": "C:\\Users\\Jesse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\obj\\",
+        "outputPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

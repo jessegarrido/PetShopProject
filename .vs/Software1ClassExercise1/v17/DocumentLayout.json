@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\",
+  "WorkspaceRootPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\software1classexercise1\\software1classexercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\software1classexercise1\\software1classexercise1\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\software1classexercise1\\software1classexercise1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\dogleash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\dogleash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\software1classexercise1\\software1classexercise1\\catfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\catfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\catfood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\software1classexercise1\\software1classexercise1\\dogleash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\dogleash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,11 +36,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Program.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\Program.cs",
-              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Program.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Program.cs",
               "RelativeToolTip": "Software1ClassExercise1\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAmwF4AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T05:21:22.983Z",
               "IsPinned": true,
@@ -54,11 +54,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ProductLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\ProductLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\ProductLogic.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\ProductLogic.cs",
-              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\ProductLogic.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\ProductLogic.cs",
               "RelativeToolTip": "Software1ClassExercise1\\ProductLogic.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAYwEUAAAAMAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAswFIAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T05:01:19.182Z",
               "EditorCaption": ""
@@ -67,9 +67,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "CatFood.cs",
-              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\CatFood.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\CatFood.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\CatFood.cs",
-              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\CatFood.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\CatFood.cs",
               "RelativeToolTip": "Software1ClassExercise1\\CatFood.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -78,11 +78,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DogLeash.cs",
-              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\DogLeash.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\DogLeash.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\DogLeash.cs",
-              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\DogLeash.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\DogLeash.cs",
               "RelativeToolTip": "Software1ClassExercise1\\DogLeash.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -91,16 +91,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Product.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\Product.cs",
-              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\Software1ClassExercise1\\Software1ClassExercise1\\Product.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Product.cs",
               "RelativeToolTip": "Software1ClassExercise1\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T00:52:12.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T00:52:12.997Z"
             }
           ]
         }

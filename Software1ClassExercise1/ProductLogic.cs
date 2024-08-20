@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetShop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace PetShop
         public void AddProduct(Product product);
         public List<Product> GetAllProducts();
         public DogLeash GetDogLeashByName(string name);
+        public CatFood GetCatFoodByName(string name);
         public List<string> GetOnlyInStockProducts();
     }
 
@@ -18,9 +20,6 @@ namespace PetShop
         private List<Product> _products { get; set; }
         private Dictionary<string, DogLeash?> _dogLeash { get; set; }
         private Dictionary<string, CatFood?> _catFood { get; set; }
-        //public decimal? Price { get; set; } = 0;
-        //public int? Quantity { get; set; } = 0; 
-        //public string Description { get; set; } = string.Empty;
         public ProductLogic() {  
             _dogLeash = new Dictionary<string, DogLeash?>();
             _catFood = new Dictionary<string, CatFood?>();
@@ -88,5 +87,18 @@ namespace PetShop
                 return null;
             }
         }
+
+
+public CatFood GetCatFoodByName(string name)
+{
+    try
+    {
+        return _catFood[name];
     }
-         }  
+    catch (Exception ex)
+    {
+        return null;
+    }
+}
+}
+}
