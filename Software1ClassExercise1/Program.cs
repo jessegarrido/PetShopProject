@@ -11,6 +11,7 @@ namespace PetShop
         {
             Console.WriteLine("Press 1 to add a product");
             Console.WriteLine("Press 2 to retreive a product");
+            Console.WriteLine("Press 3 to view total cost of inventory in stock");
             Console.WriteLine("Press 7 to view only products in stock");
             Console.WriteLine("Press 8 to view all products");
             Console.WriteLine("Type 'exit' to quit");
@@ -107,8 +108,13 @@ namespace PetShop
                             }
                         
                         break;
+                    case 3:
+                        var totalCostOfInventory = productLogic.GetTotalPriceOfInventory();
+                        Console.WriteLine($"Total cost of inventory in stock: {totalCostOfInventory}"); 
+                        break;
                     case 7:
                         var inStock = productLogic.GetOnlyInStockProducts();
+                        
                         foreach (var productName in inStock)
                         {
                             Console.WriteLine(productName);
@@ -127,6 +133,7 @@ namespace PetShop
                          }
                 Console.WriteLine("Press 1 to add a product");
                 Console.WriteLine("Press 2 to retreive a product");
+                Console.WriteLine("Press 3 to view total cost of inventory in stock");
                 Console.WriteLine("Press 7 to view only products in stock");
                 Console.WriteLine("Press 8 to view all products");
                 Console.WriteLine("Type 'exit' to quit");

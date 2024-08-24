@@ -7,12 +7,20 @@ using System.Threading.Tasks;
 
 namespace PetShop
 {
-   interface IProductLogic {
+    static class ListExtensions
+    {
+        public static List<T> InStock<T>(this List<T> list) where T : Product
+        {
+            return list.Where(x => x.Quantity > 0).ToList();
+        }
+    }
+    interface IProductLogic {
         public void AddProduct(Product product);
         public List<Product> GetAllProducts();
         public DogLeash GetDogLeashByName(string name);
         public CatFood GetCatFoodByName(string name);
         public List<string> GetOnlyInStockProducts();
+        public decimal GetTotalPriceOfInventory();
     }
 
     public class ProductLogic : IProductLogic
@@ -20,7 +28,7 @@ namespace PetShop
         private List<Product> _products { get; set; }
         private Dictionary<string, DogLeash?> _dogLeash { get; set; }
         private Dictionary<string, CatFood?> _catFood { get; set; }
-        public ProductLogic() {  
+        public ProductLogic() {
             _dogLeash = new Dictionary<string, DogLeash?>();
             _catFood = new Dictionary<string, CatFood?>();
             _products = new List<Product>();
@@ -33,7 +41,7 @@ namespace PetShop
                 WeightPounds = 7,
                 KittenFood = true
             });
-            _catFood.Add(_products[0].Name,_products[0] as CatFood);
+            _catFood.Add(_products[0].Name, _products[0] as CatFood);
             _products.Add(new DogLeash()
             {
                 Name = "Leashomatic",
@@ -55,6 +63,7 @@ namespace PetShop
             });
             _dogLeash.Add(_products[2].Name, _products[2] as DogLeash);
         }
+
         public void AddProduct(Product product)
         {
             _products.Add(product);
@@ -66,7 +75,7 @@ namespace PetShop
             {
                 _catFood.Add(product.Name, product as CatFood);
             }
-            
+
         }
         public List<Product> GetAllProducts()
         {
@@ -74,8 +83,9 @@ namespace PetShop
         }
         public List<string> GetOnlyInStockProducts()
         {
-           return _products.Where(x => x.Quantity > 0).Select(x => x.Name).ToList();     
+            return _products.InStock().Select(x => x.Name.ToString()).ToList();
         }
+
         public DogLeash GetDogLeashByName(string name)
         {
             try
@@ -89,16 +99,20 @@ namespace PetShop
         }
 
 
-public CatFood GetCatFoodByName(string name)
-{
-    try
-    {
-        return _catFood[name];
+        public CatFood GetCatFoodByName(string name)
+        {
+            try
+            {
+                return _catFood[name];
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+        public decimal GetTotalPriceOfInventory(){
+            return _products.InStock().Sum(x=>x.Price*x.Quantity) ?? 0;
+        }
+
     }
-    catch (Exception ex)
-    {
-        return null;
-    }
-}
-}
 }
