@@ -9,18 +9,19 @@ namespace PetShop
 {
     static class ListExtensions
     {
-        public static List<T> InStock<T>(this List<T> list) where T : Product
+        public static IList<T> InStock<T>(this IList<T> list) where T : Product
         {
             return list.Where(x => x.Quantity > 0).ToList();
         }
     }
     interface IProductLogic {
-        public void AddProduct(Product product);
+        public void AddProductToDictionary(Product product);
         public List<Product> GetAllProducts();
         public DogLeash GetDogLeashByName(string name);
         public CatFood GetCatFoodByName(string name);
         public List<string> GetOnlyInStockProducts();
         public decimal GetTotalPriceOfInventory();
+        public void DefineNewProduct(UILogic uiLogic);
     }
 
     public class ProductLogic : IProductLogic
@@ -64,7 +65,7 @@ namespace PetShop
             _dogLeash.Add(_products[2].Name, _products[2] as DogLeash);
         }
 
-        public void AddProduct(Product product)
+        public void AddProductToDictionary(Product product)
         {
             _products.Add(product);
             if (product is DogLeash)
@@ -112,6 +113,51 @@ namespace PetShop
         }
         public decimal GetTotalPriceOfInventory(){
             return _products.InStock().Sum(x=>x.Price*x.Quantity) ?? 0;
+        }
+        public void DefineNewProduct(UILogic uiLogic)
+        {
+            var validNewTypes = new List<int> { 1, 2 };
+            Console.WriteLine("Press 1 to add Cat Food or 2 to Add a Dog Leash");
+            int typeSelection = uiLogic.GetValidUserUserSelection(validNewTypes);
+            Product newProduct = new Product();
+            Console.Write("Add product name: ");
+            newProduct.Name = Console.ReadLine();
+            Console.Write("Add product price ");
+            newProduct.Price = decimal.Parse(Console.ReadLine());
+            Console.Write("Add product quantity: ");
+            newProduct.Quantity = int.Parse(Console.ReadLine());
+            Console.Write("Add product description: ");
+            newProduct.Description = Console.ReadLine();
+
+            switch (typeSelection)
+            {
+                case 1:
+                    var newCatFood = new CatFood();
+                    newCatFood.Name = newProduct.Name;
+                    newCatFood.Price = newProduct.Price;
+                    newCatFood.Quantity = newProduct.Quantity;
+                    newCatFood.Description = newProduct.Description;
+                    Console.Write("Add product weight in pounds: ");
+                    newCatFood.WeightPounds = int.Parse(Console.ReadLine());
+                    Console.Write("For kittens? ");
+                    newCatFood.KittenFood = bool.Parse(Console.ReadLine());
+                    this.AddProductToDictionary(newCatFood);
+                    break;
+                case 2:
+                    var newDogLeash = new DogLeash();
+                    newDogLeash.Name = newProduct.Name;
+                    newDogLeash.Price = newProduct.Price;
+                    newDogLeash.Quantity = newProduct.Quantity;
+                    newDogLeash.Description = newProduct.Description;
+                    Console.Write("Add product length in inches: ");
+                    newDogLeash.LengthInches = int.Parse(Console.ReadLine());
+                    Console.Write("Add product material: ");
+                    newDogLeash.Material = Console.ReadLine();
+                    this.AddProductToDictionary(newDogLeash);
+                    break;
+                default:
+                    break;
+            }
         }
 
     }
