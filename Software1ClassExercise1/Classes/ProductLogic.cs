@@ -118,7 +118,7 @@ namespace PetShop
         {
             var validNewTypes = new List<int> { 1, 2 };
             Console.WriteLine("Press 1 to add Cat Food or 2 to Add a Dog Leash");
-            int typeSelection = uiLogic.GetValidUserUserSelection(validNewTypes);
+            int typeSelection = uiLogic.GetValidUserSelection(validNewTypes);
             Product newProduct = new Product();
             Console.Write("Add product name: ");
             newProduct.Name = Console.ReadLine();

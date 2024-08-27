@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Security;
 using System.Text;
@@ -11,16 +12,16 @@ namespace PetShop
     interface IUILogic
     {
         public void ShowMainMenu();
-        public int GetValidUserUserSelection();
-        public int GetValidUserUserSelection(List<int> usersValidOptions);
-
+        public int GetValidUserSelection();
+        public int GetValidUserSelection(List<int> usersValidOptions);
+        public Product RetrieveAProduct(string name, ProductLogic productLogic);
     }
     public class UILogic : IUILogic
     {
-        private List<int> _validOptions { get; set; }
+        private List<int> _validMainMenuOptions { get; set; }
         public UILogic()
         {
-            _validOptions = new List<int>(new int[] { 1, 2, 3, 7, 8 });
+            _validMainMenuOptions = new List<int>(new int[] { 1, 2, 3, 7, 8 });
         }
         public void ShowMainMenu()
         {
@@ -31,7 +32,7 @@ namespace PetShop
             Console.WriteLine("Press 8 to view all products");
             Console.WriteLine("Type 'exit' to quit");
         }
-        public int GetValidUserUserSelection()
+        public int GetValidUserSelection()
         {
             int? validSelection = null;
             string input;
@@ -41,10 +42,10 @@ namespace PetShop
                 if (input.ToLower() == "exit") { return 0; }
                 int.TryParse(input, out int userVal);
                 validSelection = userVal;
-            } while (!_validOptions.Contains(validSelection ?? -1));
+            } while (!_validMainMenuOptions.Contains(validSelection ?? -1));
             return validSelection ?? -1;
         }
-        public int GetValidUserUserSelection(List<int> userProvidedValidOptions)
+        public int GetValidUserSelection(List<int> userProvidedValidOptions)
         {
             string input;
             int? validSelection = null;
@@ -57,6 +58,20 @@ namespace PetShop
             } while (!userProvidedValidOptions.Contains(validSelection ?? -1));
             return validSelection ?? -1;
         }
-
+        public Product? RetrieveAProduct(string name, ProductLogic productLogic)
+        {
+            var allDogLeash = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(DogLeash));
+            var allCatFood = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(CatFood));
+            if (allDogLeash.Count(p => p.Name == name) > 0)
+            {
+                return productLogic.GetDogLeashByName(name) as Product;
+            } else if (allCatFood.Count(p => p.Name == name) > 0)
+            {
+                return productLogic.GetCatFoodByName(name) as Product;
+            } else
+            {
+                return null;
+            }
+        }   
     }
 }

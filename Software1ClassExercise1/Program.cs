@@ -15,15 +15,27 @@ namespace PetShop
             do
             {
                 uiLogic.ShowMainMenu();
-                selection = uiLogic.GetValidUserUserSelection();  
+                selection = uiLogic.GetValidUserSelection();  
                 switch (selection) {
                     case 1:
                         productLogic.DefineNewProduct(uiLogic);
                         break;
                     case 2:
-                        var allDogLeash = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(DogLeash));
-                        var allCatFood = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(CatFood));
                         Console.WriteLine("Enter the name of a product to retreive:");
+                        string keyName = Console.ReadLine();
+                        Product? foundProduct = uiLogic.RetrieveAProduct(keyName, productLogic);
+                        if (foundProduct != null)
+                        {
+                            Console.WriteLine(JsonSerializer.Serialize(foundProduct));
+                        } else
+                        {
+                            Console.WriteLine($"Product {keyName} was not found :(");
+                        }
+                        /*
+                        Console.WriteLine(JsonSerializer.Serialize(foundProduct));/*
+                        //var allDogLeash = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(DogLeash));
+                       // var allCatFood = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(CatFood));
+                        
                         string keyName = Console.ReadLine();
                         if (allDogLeash.Where(p => p.Name == keyName).Count() > 0)
                         {
@@ -39,11 +51,11 @@ namespace PetShop
                             {
                             Console.WriteLine($"{keyName} was not found :( ");
                             }
-                        
+                        */
                         break;
                     case 3:
                         var totalCostOfInventory = productLogic.GetTotalPriceOfInventory();
-                        Console.WriteLine($"Total cost of inventory in stock: {totalCostOfInventory}"); 
+                        Console.WriteLine($"Total cost of inventory in stock: ${totalCostOfInventory}"); 
                         break;
                     case 7:
                         var inStock = productLogic.GetOnlyInStockProducts();
