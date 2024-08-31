@@ -5,21 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using PetShop.Validators;
+using FluentValidation;
+using Petshop;
 
 namespace PetShop
 {
-    static class ListExtensions
-    {
-        public static IList<T> InStock<T>(this IList<T> list) where T : Product
-        {
-            return list.Where(x => x.Quantity > 0).ToList();
-        }
-    }
     public interface IProductLogic {
         public void AddProductToDictionary(Product product);
         public List<Product> GetAllProducts();
-        public DogLeash GetDogLeashByName(string name);
-        public CatFood GetCatFoodByName(string name);
+        public T GetProductByName<T>(string name) where T : Product;
         public List<string> GetOnlyInStockProducts();
         public decimal GetTotalPriceOfInventory();
         public void DefineNewProduct(UILogic uilogic);
@@ -88,78 +85,45 @@ namespace PetShop
             return _products.InStock().Select(x => x.Name.ToString()).ToList();
         }
 
-        public DogLeash GetDogLeashByName(string name)
+        public T GetProductByName<T>(string name) where T : Product
         {
-            try
+            if (_dogLeash.ContainsKey(name))
             {
-                return _dogLeash[name];
+                return _dogLeash[name] as T;
             }
-            catch (Exception ex)
+            else if (_catFood.ContainsKey(name))
             {
+                return _catFood[name] as T;
+            }
+            else
                 return null;
-            }
-        }
-
-
-        public CatFood GetCatFoodByName(string name)
-        {
-            try
-            {
-                return _catFood[name];
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        }
+          }   
         public decimal GetTotalPriceOfInventory(){
             return _products.InStock().Sum(x=>x.Price*x.Quantity) ?? 0;
         }
         public void DefineNewProduct(UILogic uiLogic)
         {
-            var validNewTypes = new List<int> { 1, 2 };
             Console.WriteLine("Press 1 to add Cat Food or 2 to Add a Dog Leash");
-            int typeSelection = uiLogic.GetValidUserSelection(validNewTypes);
-            Product newProduct = new Product();
-            Console.Write("Add product name: ");
-            newProduct.Name = Console.ReadLine();
-            Console.Write("Add product price ");
-            newProduct.Price = decimal.Parse(Console.ReadLine());
-            Console.Write("Add product quantity: ");
-            newProduct.Quantity = int.Parse(Console.ReadLine());
-            Console.Write("Add product description: ");
-            newProduct.Description = Console.ReadLine();
-
+            int typeSelection = uiLogic.GetValidUserSelection(new List<int> { 1, 2 });
+            Console.WriteLine("Enter a JSON string that describes the product:");
+            string json = Console.ReadLine();
+            ProductValidator validator = new ProductValidator();
             switch (typeSelection)
             {
                 case 1:
-                    var newCatFood = new CatFood();
-                    newCatFood.Name = newProduct.Name;
-                    newCatFood.Price = newProduct.Price;
-                    newCatFood.Quantity = newProduct.Quantity;
-                    newCatFood.Description = newProduct.Description;
-                    Console.Write("Add product weight in pounds: ");
-                    newCatFood.WeightPounds = int.Parse(Console.ReadLine());
-                    Console.Write("For kittens? ");
-                    newCatFood.KittenFood = bool.Parse(Console.ReadLine());
-                    this.AddProductToDictionary(newCatFood);
+                    CatFood catFood = JsonSerializer.Deserialize<CatFood>(json);
+                    validator.ValidateAndThrow(catFood);
+                    this.AddProductToDictionary(catFood);
                     break;
                 case 2:
-                    var newDogLeash = new DogLeash();
-                    newDogLeash.Name = newProduct.Name;
-                    newDogLeash.Price = newProduct.Price;
-                    newDogLeash.Quantity = newProduct.Quantity;
-                    newDogLeash.Description = newProduct.Description;
-                    Console.Write("Add product length in inches: ");
-                    newDogLeash.LengthInches = int.Parse(Console.ReadLine());
-                    Console.Write("Add product material: ");
-                    newDogLeash.Material = Console.ReadLine();
-                    this.AddProductToDictionary(newDogLeash);
+                    DogLeash dogLeash = JsonSerializer.Deserialize<DogLeash>(json);
+                    validator.ValidateAndThrow(dogLeash);
+                    this.AddProductToDictionary(dogLeash);
                     break;
                 default:
                     break;
             }
-        }
 
+        }
     }
 }

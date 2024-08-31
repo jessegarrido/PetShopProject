@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace PetShop
 {
+    [JsonDerivedType(typeof(Product), typeDiscriminator: "base")]
+    [JsonDerivedType(typeof(DogLeash), typeDiscriminator: "dogleash")]
+    [JsonDerivedType(typeof(CatFood), typeDiscriminator: "catfood")]
     public class Product
     {
         public string Name { get; set; } = string.Empty;
@@ -20,7 +24,7 @@ namespace PetShop
     }
     public class DogLeash : Product
     {
-            public int LengthInches { get; set; } = 0;
-            public string Material { get; set; } = string.Empty;
-        }
+        public int? LengthInches { get; set; } = 0;
+        public string Material { get; set; } = string.Empty;
+     }
     }
