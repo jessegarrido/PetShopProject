@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\classes\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\classes\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\classes\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\software1classexercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C122DA8D-C57F-47FC-9D5A-EDC4CEFF4E95}|Software1ClassExercise1\\Software1ClassExercise1.csproj|solutionrelative:software1classexercise1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Program.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\Program.cs",
               "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Program.cs",
               "RelativeToolTip": "Software1ClassExercise1\\Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAswCEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T05:21:22.983Z",
               "IsPinned": true,
@@ -44,13 +48,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Classes\\Product.cs",
+              "RelativeDocumentMoniker": "Software1ClassExercise1\\Classes\\Product.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Classes\\Product.cs",
+              "RelativeToolTip": "Software1ClassExercise1\\Classes\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T00:15:05.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UILogic.cs",
               "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Classes\\UILogic.cs",
               "RelativeDocumentMoniker": "Software1ClassExercise1\\Classes\\UILogic.cs",
               "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Classes\\UILogic.cs",
               "RelativeToolTip": "Software1ClassExercise1\\Classes\\UILogic.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAYwDQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T00:34:02.407Z",
               "EditorCaption": ""
@@ -63,7 +80,7 @@
               "RelativeDocumentMoniker": "Software1ClassExercise1\\Classes\\ProductLogic.cs",
               "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\Software1ClassExercise1\\Classes\\ProductLogic.cs",
               "RelativeToolTip": "Software1ClassExercise1\\Classes\\ProductLogic.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAiwHsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T00:21:28.784Z",
               "EditorCaption": ""

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace PetShop
 {
@@ -14,14 +15,14 @@ namespace PetShop
             return list.Where(x => x.Quantity > 0).ToList();
         }
     }
-    interface IProductLogic {
+    public interface IProductLogic {
         public void AddProductToDictionary(Product product);
         public List<Product> GetAllProducts();
         public DogLeash GetDogLeashByName(string name);
         public CatFood GetCatFoodByName(string name);
         public List<string> GetOnlyInStockProducts();
         public decimal GetTotalPriceOfInventory();
-        public void DefineNewProduct(UILogic uiLogic);
+        public void DefineNewProduct(UILogic uilogic);
     }
 
     public class ProductLogic : IProductLogic

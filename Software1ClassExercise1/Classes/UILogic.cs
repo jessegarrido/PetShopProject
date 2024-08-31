@@ -5,25 +5,24 @@ using System.Linq;
 using System.Net.Security;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Hosting;
 
 namespace PetShop
 
 {
     interface IUILogic
     {
-        public void ShowMainMenu();
-        public int GetValidUserSelection();
+        public List<int> ShowMainMenu();
+        //public int GetValidUserSelection();
         public int GetValidUserSelection(List<int> usersValidOptions);
-        public Product RetrieveAProduct(string name, ProductLogic productLogic);
+        public Product RetrieveAProduct(string name);
     }
     public class UILogic : IUILogic
     {
-        private List<int> _validMainMenuOptions { get; set; }
         public UILogic()
         {
-            _validMainMenuOptions = new List<int>(new int[] { 1, 2, 3, 7, 8 });
         }
-        public void ShowMainMenu()
+        public List<int> ShowMainMenu()
         {
             Console.WriteLine("Press 1 to add a product");
             Console.WriteLine("Press 2 to retreive a product");
@@ -31,21 +30,11 @@ namespace PetShop
             Console.WriteLine("Press 7 to view only products in stock");
             Console.WriteLine("Press 8 to view all products");
             Console.WriteLine("Type 'exit' to quit");
+            var validMainMenuOptions = new List<int>(new int[] { 1, 2, 3, 7, 8 });
+            return validMainMenuOptions;
         }
-        public int GetValidUserSelection()
-        {
-            int? validSelection = null;
-            string input;
-            do
-            {
-                input = Console.ReadLine();
-                if (input.ToLower() == "exit") { return 0; }
-                int.TryParse(input, out int userVal);
-                validSelection = userVal;
-            } while (!_validMainMenuOptions.Contains(validSelection ?? -1));
-            return validSelection ?? -1;
-        }
-        public int GetValidUserSelection(List<int> userProvidedValidOptions)
+
+        public int GetValidUserSelection(List<int> validOptions)
         {
             string input;
             int? validSelection = null;
@@ -55,11 +44,12 @@ namespace PetShop
                 if (input.ToLower() == "exit") { return 0; }
                 int.TryParse(input, out int userVal);
                 validSelection = userVal;
-            } while (!userProvidedValidOptions.Contains(validSelection ?? -1));
+            } while (!validOptions.Contains(validSelection ?? -1));
             return validSelection ?? -1;
         }
-        public Product? RetrieveAProduct(string name, ProductLogic productLogic)
+        public Product? RetrieveAProduct(string name)
         {
+            var productLogic = new ProductLogic();
             var allDogLeash = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(DogLeash));
             var allCatFood = productLogic.GetAllProducts().Where(x => x.GetType() == typeof(CatFood));
             if (allDogLeash.Count(p => p.Name == name) > 0)

@@ -13,5 +13,14 @@ namespace PetShop
         public int? Quantity { get; set; } = 0;
         public string Description { get; set; } = string.Empty;
     }
-
-}
+    public class CatFood : Product
+    {
+        public double WeightPounds { get; set; } = 0;
+        public bool KittenFood { get; set; } = false;
+    }
+    public class DogLeash : Product
+    {
+            public int LengthInches { get; set; } = 0;
+            public string Material { get; set; } = string.Empty;
+        }
+    }
