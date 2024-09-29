@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F6BAA80-4D9E-4628-AC92-632D3BE7682D}|PetStore.Data\\PetStore.Data.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petstore.data\\petstore.data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F6BAA80-4D9E-4628-AC92-632D3BE7682D}|PetStore.Data\\PetStore.Data.csproj|solutionrelative:petstore.data\\petstore.data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|solutionrelative:petshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petshop\\classes\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|solutionrelative:petshop\\classes\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petshop\\classes\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|solutionrelative:petshop\\classes\\productlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petshop\\validators\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|solutionrelative:petshop\\validators\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|c:\\users\\jesse\\documents\\codeyou\\petshopproject\\petshop\\extensions\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9583993D-25FF-4FFF-B820-A8DE2D28FED0}|PetShop\\Petshop.csproj|solutionrelative:petshop\\extensions\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PetStore.Data.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetStore.Data.cs",
+              "RelativeDocumentMoniker": "PetStore.Data\\PetStore.Data.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetStore.Data.cs*",
+              "RelativeToolTip": "PetStore.Data\\PetStore.Data.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T17:53:11.876Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Extensions.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Extensions\\Extensions.cs",
+              "RelativeDocumentMoniker": "PetShop\\Extensions\\Extensions.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Extensions\\Extensions.cs",
+              "RelativeToolTip": "PetShop\\Extensions\\Extensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T20:10:54.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Validators\\ProductValidator.cs",
+              "RelativeDocumentMoniker": "PetShop\\Validators\\ProductValidator.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Validators\\ProductValidator.cs",
+              "RelativeToolTip": "PetShop\\Validators\\ProductValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T19:47:32.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Classes\\ProductLogic.cs",
+              "RelativeDocumentMoniker": "PetShop\\Classes\\ProductLogic.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Classes\\ProductLogic.cs",
+              "RelativeToolTip": "PetShop\\Classes\\ProductLogic.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAmwFUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T23:03:13.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Classes\\Product.cs",
+              "RelativeDocumentMoniker": "PetShop\\Classes\\Product.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Classes\\Product.cs",
+              "RelativeToolTip": "PetShop\\Classes\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T23:03:00.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Program.cs",
+              "RelativeDocumentMoniker": "PetShop\\Program.cs",
+              "ToolTip": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetShop\\Program.cs",
+              "RelativeToolTip": "PetShop\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwC0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T23:02:48.152Z",
+              "EditorCaption": ""
             }
           ]
         }

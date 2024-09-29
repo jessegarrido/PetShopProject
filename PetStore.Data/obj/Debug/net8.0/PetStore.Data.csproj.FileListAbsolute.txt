@@ -1,0 +1,15 @@
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\bin\Debug\net8.0\PetStore.Data.deps.json
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\bin\Debug\net8.0\PetStore.Data.dll
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\bin\Debug\net8.0\PetStore.Data.pdb
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.csproj.AssemblyReference.cache
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.AssemblyInfoInputs.cache
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.AssemblyInfo.cs
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.csproj.CoreCompileInputs.cache
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.sourcelink.json
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.dll
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\refint\PetStore.Data.dll
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.pdb
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\ref\PetStore.Data.dll
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\bin\Debug\net8.0\PetStore.Data.runtimeconfig.json
+C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetStore.Data\obj\Debug\net8.0\PetStore.Data.genruntimeconfig.cache

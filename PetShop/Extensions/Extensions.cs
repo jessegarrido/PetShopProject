@@ -1,13 +1,5 @@
-﻿using PetShop;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
-using System.Xml.Linq;
-using Microsoft.Extensions.Hosting;
-using FluentValidation;
+﻿using FluentValidation;
+using PetStore;
 
 namespace Petshop
 {
@@ -15,7 +7,7 @@ namespace Petshop
     {
         public static IList<T> InStock<T>(this IList<T> list) where T : Product
         {
-            return list.Where(x => x.Quantity > 0).ToList();
+            return list.Where(x => (int.Parse(x.Quantity)) > 0).ToList();
         }
     }
 }

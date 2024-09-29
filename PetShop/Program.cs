@@ -1,10 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PetShop;
-using System;
 using System.Text.Json;
-using System.Xml.Linq;
-using Microsoft.Extensions.Hosting;
-using FluentValidation;
+using PetStore;
+using System.Reflection;
+using System;
 
 namespace PetShop
 {
@@ -14,12 +12,14 @@ namespace PetShop
         {
             var services = new ServiceCollection();
             services.AddTransient<IProductLogic, ProductLogic>();
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IUILogic, UILogic>();
             return services.BuildServiceProvider();
         }
         static void Main(string[] args)
         {
             IServiceProvider services = CreateServiceCollection();
+            var petstoredata = services.GetService<IProductRepository>();
             var productLogic = services.GetService<IProductLogic>();
             var uiLogic = services.GetService<IUILogic>();
             int ? selection = null;
@@ -32,33 +32,40 @@ namespace PetShop
                         productLogic.DefineNewProduct((UILogic)uiLogic);
                         break;
                     case 2:
-                        Console.WriteLine("Enter the name of a product to retreive:");
-                        string name = Console.ReadLine();
-                        var foundProduct = productLogic.GetProductByName<Product>(name);
+                        Console.WriteLine("Enter the id of a product to retreive:");
+                        string id = Console.ReadLine();
+                        var foundProduct = productLogic.GetProductById(id);
                         if (foundProduct != null)
                         {
                             Console.WriteLine(JsonSerializer.Serialize(foundProduct));
                         } else
                         {
-                            Console.WriteLine($"Product {name} was not found :(");
+                            Console.WriteLine($"ProductId {id} was not found :(");
                         }
                         break;
-                    case 3:
-                        var totalCostOfInventory = productLogic.GetTotalPriceOfInventory();
-                        Console.WriteLine($"Total cost of inventory in stock: ${totalCostOfInventory}"); 
-                        break;
-                    case 7:
-                        var inStock = productLogic.GetOnlyInStockProducts();
-                        foreach (var productName in inStock)
-                        {
-                            Console.WriteLine(productName);
-                        }
-                        break;
+                    //case 3:
+                    //    var totalCostOfInventory = productLogic.GetTotalPriceOfInventory();
+                    //    Console.WriteLine($"Total cost of inventory in stock: ${totalCostOfInventory}"); 
+                    //    break;
+                    //case 7:
+                    //    var inStock = productLogic.GetOnlyInStockProducts();
+                    //    foreach (var productName in inStock)
+                    //    {
+                    //        Console.WriteLine(productName);
+                    //    }
+                    //    break;
                     case 8:
                             var allProducts = productLogic.GetAllProducts();
                             foreach (var product in allProducts) {
-                                Console.WriteLine(product.Name);
+                            //    Console.WriteLine(product.Name);
+                            //Product product = new Product();
+                            PropertyInfo[] properties = typeof(Product).GetProperties();
+                            foreach (PropertyInfo property in properties)
+                            {
+                                object propertyValue = property.GetValue(product);
+                                Console.WriteLine($"{property.Name} : {propertyValue}");
                             }
+                        }
                         break;
                          }
             } while (selection != 0);

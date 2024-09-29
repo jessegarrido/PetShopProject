@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
+using PetStore;
 
 namespace PetShop.Validators
 {
@@ -12,8 +8,8 @@ namespace PetShop.Validators
         public ProductValidator()
         {
             RuleFor(x => x.Name).NotNull();
-            RuleFor(x => x.Price).GreaterThanOrEqualTo(0);
-            RuleFor(x => x.Quantity).GreaterThanOrEqualTo(0);
+            RuleFor(x => decimal.Parse(x.Price.Trim('$'))).GreaterThanOrEqualTo(0);
+            RuleFor(x => int.Parse(x.Quantity)).GreaterThanOrEqualTo(0);
             RuleFor(x => x.Description).Must(x => x == null || x.Length >= 10);
             }
         }
