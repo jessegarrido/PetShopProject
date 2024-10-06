@@ -23,12 +23,14 @@ namespace PetShop
         public List<int> ShowMainMenu()
         {
             Console.WriteLine("Press 1 to add a product");
-            Console.WriteLine("Press 2 to retreive a product");
-            Console.WriteLine("Press 3 to view total cost of inventory in stock");
+            Console.WriteLine("Press 2 to view a product");
+            Console.WriteLine("Press 3 to add an order");
+            Console.WriteLine("Press 4 to view an order");
+            Console.WriteLine("Press 5 to view total cost of inventory in stock");
             Console.WriteLine("Press 7 to view only products in stock");
             Console.WriteLine("Press 8 to view all products");
             Console.WriteLine("Type 'exit' to quit");
-            return new List<int>(new int[] { 1, 2, 3, 7, 8 });
+            return new List<int>(new int[] { 1, 2, 3, 4, 5, 7, 8 });
         }
         public int GetValidUserSelection(List<int> validOptions)
         {

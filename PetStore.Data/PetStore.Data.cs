@@ -1,13 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using System.Reflection.Metadata;
 namespace PetStore
 {
     public interface IProductRepository
     {
-        public void AddProduct(Product product);
-        public Product GetProductById(string id);
-        public List<Product> GetAllProducts();
+       public void AddProduct(Product product);
+       public Product GetProductById(int id);
+       public List<Product> GetAllProducts();
+    }
+    public interface IOrderRepository
+    {
+        public void AddOrder(Order order);
+        public Order GetOrderById(int id);
+     //   public List<Order> GetAllProducts();
     }
     public class ProductRepository : IProductRepository
     {
@@ -17,7 +22,7 @@ namespace PetStore
             _context.Add<Product>(product);
             _context.SaveChanges();
         }
-        public Product GetProductById(string id)
+        public Product GetProductById(int id)
         {
             Product product = _context.Products
                 .Where(e => String.Equals(e.ProductId, id))
@@ -34,6 +39,7 @@ namespace PetStore
     }
     public class ProductContext : DbContext
     {
+        public DbSet<Order> Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public string DbPath { get; }
         public ProductContext()
@@ -42,15 +48,47 @@ namespace PetStore
             var path = Environment.GetFolderPath(folder);
             DbPath = System.IO.Path.Join(path, "petshop.db");
         }
-        
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite($"Data Source={DbPath}");
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite($"Data Source={DbPath}");   
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order>()
+                .HasMany(e => e.Products)
+                .WithOne(e => e.Order);
+        }
     }
     public class Product
     {
-        public string ProductId { get; set; } = string.Empty;
-        public string Name { get; set; } = string.Empty;
-        public string Price { get; set; } = string.Empty;
-        public string Quantity { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Description { get; set; }
+        public Order? Order { get; set; } = null!;
+    }
+    public class Order
+    {
+        public int OrderId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public ICollection<Product> Products { get; set; } = new List<Product>();
+    }
+        public class OrderRoot
+    {
+        public List<Product> Products { get; set; }
+    }
+    public class OrderRepository : IOrderRepository
+    {
+        public ProductContext _context = new ProductContext();
+        public void AddOrder(Order order)
+        {
+            _context.Add<Order>(order);
+            _context.SaveChanges();
+        }
+        public Order GetOrderById(int id)
+        {
+            Order order = _context.Orders
+                .Where(e => (e.OrderId == id))
+                .Include(e => e.Products)
+                .FirstOrDefault();
+            return order;
+        }
     }
 }

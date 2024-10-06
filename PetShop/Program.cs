@@ -13,27 +13,30 @@ namespace PetShop
             var services = new ServiceCollection();
             services.AddTransient<IProductLogic, ProductLogic>();
             services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IUILogic, UILogic>();
             return services.BuildServiceProvider();
         }
         static void Main(string[] args)
         {
             IServiceProvider services = CreateServiceCollection();
-            var petstoredata = services.GetService<IProductRepository>();
+            var productdata = services.GetService<IProductRepository>();
+            var orderdata = services.GetService<IOrderRepository>();
             var productLogic = services.GetService<IProductLogic>();
             var uiLogic = services.GetService<IUILogic>();
             int ? selection = null;
             do
             {
                 var validOptions = uiLogic.ShowMainMenu();
-                selection = uiLogic.GetValidUserSelection(validOptions);  
+                selection = uiLogic.GetValidUserSelection(validOptions);
+                int id;
                 switch (selection) {
                     case 1:
-                        productLogic.DefineNewProduct((UILogic)uiLogic);
+                        productLogic.AddNewProduct();
                         break;
                     case 2:
-                        Console.WriteLine("Enter the id of a product to retreive:");
-                        string id = Console.ReadLine();
+                        Console.WriteLine("Enter the id of a product to retrieve:");
+                        id = int.Parse(Console.ReadLine());
                         var foundProduct = productLogic.GetProductById(id);
                         if (foundProduct != null)
                         {
@@ -41,6 +44,22 @@ namespace PetShop
                         } else
                         {
                             Console.WriteLine($"ProductId {id} was not found :(");
+                        }
+                        break;
+                    case 3:
+                        productLogic.AddNewOrder();
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter the id of a order to retrieve:");
+                        id = int.Parse(Console.ReadLine());
+                        var foundOrder = productLogic.GetOrderById(id);
+                        if (foundOrder != null)
+                        {
+                            Console.WriteLine(JsonSerializer.Serialize(foundOrder));
+                        }
+                        else
+                        {
+                            Console.WriteLine($"OrderId {id} was not found :(");
                         }
                         break;
                     //case 3:
