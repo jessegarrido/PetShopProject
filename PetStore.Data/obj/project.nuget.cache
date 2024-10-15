@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RV3KoHWuvLw=",
+  "dgSpecHash": "4/aDdaunyMU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetStore.Data.csproj",
+  "projectFilePath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetShop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jesse\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Jesse\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

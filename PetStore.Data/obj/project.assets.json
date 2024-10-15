@@ -2579,9 +2579,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetStore.Data.csproj",
-      "projectName": "PetStore.Data",
-      "projectPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetStore.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetShop.Data.csproj",
+      "projectName": "PetShop.Data",
+      "projectPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\PetShop.Data.csproj",
       "packagesPath": "C:\\Users\\Jesse\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Jesse\\Documents\\CodeYou\\PetShopProject\\PetStore.Data\\obj\\",
       "projectStyle": "PackageReference",
@@ -2598,6 +2598,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2654,7 +2655,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
