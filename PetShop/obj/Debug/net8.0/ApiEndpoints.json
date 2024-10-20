@@ -1,9 +1,25 @@
 [
   {
     "ContainingType": "PetShop.ProductController",
-    "Method": "Get",
+    "Method": "GetAllProducts",
     "RelativePath": "api/{action}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "action",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetShop.ProductController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/{action}",
+    "HttpMethod": "",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -37,6 +53,37 @@
     "ReturnTypes": [
       {
         "Type": "PetShop.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PetShop.ProductController",
+    "Method": "AddOrder",
+    "RelativePath": "api/{action}",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "products",
+        "Type": "PetShop.ProductsRoot",
+        "IsRequired": true
+      },
+      {
+        "Name": "action",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PetShop.Order",
         "MediaTypes": [
           "text/plain",
           "application/json",

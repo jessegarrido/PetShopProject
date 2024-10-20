@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using PetStore;
+using PetShop;
 
 namespace PetShop
 {

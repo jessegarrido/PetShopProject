@@ -1858,6 +1858,7 @@
       },
       "PetShop.Data/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.8"
         },
         "runtime": {
