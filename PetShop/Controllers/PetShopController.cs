@@ -1,10 +1,7 @@
 ﻿using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Text.Json;
 namespace PetShop
-{ 
+{
     [ApiController]
     [Route("api/{action}")]
     public class ProductController : ControllerBase
@@ -23,7 +20,7 @@ namespace PetShop
         {
             try
             {
-                var allProducts = _productRepository.GetAllProducts();
+                var allProducts = await _productRepository.GetAllProductsAsync();
                 return Ok(allProducts);
             }
             catch (Exception)
@@ -35,7 +32,7 @@ namespace PetShop
         {
             try
             {
-                var allOrders = _orderRepository.GetAllOrders();
+                var allOrders = await _orderRepository.GetAllOrdersAsync();
                 return Ok(allOrders);
             }
             catch (Exception)
@@ -44,19 +41,19 @@ namespace PetShop
             }
         }
         [HttpGet("{id:int}")]
-        public IActionResult GetProduct(int id)
+        public async Task<IActionResult> GetProduct(int id)
         {
-            return Ok(_productRepository.GetProductById(id));
+            return Ok(await _productRepository.GetProductByIdAsync(id));
         }
         [HttpGet("{id:int}")]
-        public Order GetOrder(int id)
+        public async Task<Order> GetOrder(int id)
         {
-            return _orderRepository.GetOrderById(id);
+            return await _orderRepository.GetOrderByIdAsync(id);
         }
         [HttpPost]
         public async Task<ActionResult<Product>> AddProduct(Product product)
         {
-            _productRepository.AddProduct(product);
+            await _productRepository.AddProductAsync(product);
             await _productRepository.SaveChangesAsync();
             return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product); 
         }
@@ -67,14 +64,10 @@ namespace PetShop
             Order order = new Order();
             order.OrderId = orderCount + 1;
             order.OrderDate = DateTime.Now;
-            
-            //string json = Console.ReadLine();
-           // var stringproducts = JsonSerializer.Serialize<ProductsRoot>(products);
-           // Console.Write($"Products ordered (as JSON): {stringproducts}");
             order.Products = products.Products;
             orderValidator validator = new orderValidator();
             validator.ValidateAndThrow(order);
-            _orderRepository.AddOrder(order);
+            await _orderRepository.AddOrderAsync(order);
             await _productRepository.SaveChangesAsync();
             return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
         }

@@ -172,4 +172,3 @@ C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetShop\bin\Debug\net8.0\Newtons
 C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetShop\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetShop\bin\Debug\net8.0\PetShop.Data.dll
 C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetShop\bin\Debug\net8.0\PetShop.Data.pdb
-C:\Users\Jesse\Documents\CodeYou\PetShopProject\PetShop\obj\Debug\net8.0\Petshop.MvcApplicationPartsAssemblyInfo.cs
