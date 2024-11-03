@@ -5,15 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetShop;
-using PetStore;
 
 #nullable disable
 
-namespace PetStore.Data.Migrations
+namespace PetShop.Data.Migrations
 {
     [DbContext(typeof(ProductContext))]
-    [Migration("20241006175242_InitalModel")]
-    partial class InitalModel
+    [Migration("20241018191527_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,23 +20,23 @@ namespace PetStore.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
 
-            modelBuilder.Entity("PetStore.Order", b =>
+            modelBuilder.Entity("PetShop.Order", b =>
                 {
-                    b.Property<int>("OrderId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("OrderId");
+                    b.HasKey("Id");
 
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("PetStore.Product", b =>
+            modelBuilder.Entity("PetShop.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -49,29 +48,29 @@ namespace PetStore.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("OrderId")
+                    b.Property<int>("OrderId")
                         .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("PetStore.Product", b =>
+            modelBuilder.Entity("PetShop.Product", b =>
                 {
-                    b.HasOne("PetStore.Order", "Order")
+                    b.HasOne("PetShop.Order", null)
                         .WithMany("Products")
-                        .HasForeignKey("OrderId");
-
-                    b.Navigation("Order");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("PetStore.Order", b =>
+            modelBuilder.Entity("PetShop.Order", b =>
                 {
                     b.Navigation("Products");
                 });
